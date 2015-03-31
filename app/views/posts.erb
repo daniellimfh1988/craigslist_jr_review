@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Welcome to the <b><%= @category.category %> category</b>!</h1>
+
+<h2><b>Below are the relevant posts: </b></h2>
+<ul>
+  <% @posts.each do |post| %>
+  <li><b><%= p post.post_title %></li></b>
+  <%= p post.post_body %>
+  <a href = "/posts/<%= post.id %>/edit">Edit</a><br>
+  <br>
+<%end%>
+</ul>
+
+<h3>Create a new post for this category</h3>
+<a href = "/categories/<%= @category.id %>/new">New Post</a>
+
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Please ensure you edit properly or face my wrath</b>!</h1>
+
+<form action='/categories/<%= @post[0].id %>/posts' method='post'>
+<h3>Title: <%= @post[0].post_title %></h3>
+   <input type="text" name="post[post_title]"
+   placeholder="PLease enter new title here">
+<br/>
+<h3>Description: <%= @post[0].post_body %></h3>
+   <input type="text" name="post[post_body]" placeholder="PLease enter new description here">
+<input type="submit" value="Update">
+
+</form>
+
+</div>
+
+<!--daniel, you forgotten that the column mus correspond to the column in your table post[the_post_title] => post[the_post_title] >
+
+  <!--daniel, the reason why you called [0] within the code is because you are are calling an array so you will need to call [0] to obtain the index_code = 0 >

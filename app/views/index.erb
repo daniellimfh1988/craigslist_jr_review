@@ -1,0 +1,20 @@
+
+<h1>
+Welcome to Craigslist
+</h1>
+
+<h2><b>Which category would you like to browse?</b></h2>
+
+<p>
+<% Category.all.each do |t| %>
+  <ul>
+    <a href="/categories/<%= t.id %>/posts">
+    <li><%= t.category %></li>
+</a></ul>
+<%end%>
+</p>
+
+<!--
+1. first specify the categories you want to see (car, books,houses)
+2.
+-->

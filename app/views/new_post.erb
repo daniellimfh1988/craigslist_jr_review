@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>So, you want to create a new posting?</h1>
+    <p>
+      <form action='/categories/<%= @category.id %>/new' method='post'>
+      <b>Title:<br><br>
+        <input type="text" name="title" placeholder="Type in the product name"></b>
+      <br/>
+      <br/>
+      <b>Description:</b><br><br>
+       <textarea cols="50" rows="5" name="body" placeholder="Type in the description of your product here"></textarea>
+      <br/>
+      <br/>
+    </p>
+    <b><p>Which category does your item fall under?</b>
+      <br>
+      <% Category.all.each do |x| %>
+    <ul><input type="radio" name="category" value="<%= x.id %>"> <%= x.category %></a></ul>
+    <%end%>
+    </p>
+    <br><br>
+    <p>
+      <input type="submit" value="Submit!">
+    </p>
+  </form>
+</div>
